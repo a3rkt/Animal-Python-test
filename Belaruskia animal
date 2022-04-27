@@ -9,19 +9,17 @@ class Pet:
     def make_sound(self):
         print(f'{self.alias} {self.name} {self.sound}')
 
+
 class Cat(Pet):
 
     def __init__(self, name, age, sound='мыу-мыу', alias='Кот'):
-        super().__init__(self, name, age, sound)
-        self.sound = sound
-        self.alias = alias
+        super().__init__(name, age, sound, alias)
+
 
 class Dog(Pet):
 
     def __init__(self, name, age, sound='бреша', alias='Пёс'):
-        super().__init__(self, name, age, sound)
-        self.sound = sound
-        self.alias = alias
+        super().__init__(name, age, sound, alias)
 
 
 barsik = Cat('Барсик', 10)
