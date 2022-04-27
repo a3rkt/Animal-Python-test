@@ -22,7 +22,7 @@ class Dog(Pet):
 
 class Cat(Pet):
 
-    def __init__(self, name, age, alias ='Кот', sound='мыу мыу'):
+    def __init__(self, name, age, alias ='Кот', sound='мыу-мыу'):
         self.name = name
         self.age = age
         self.alias = alias
