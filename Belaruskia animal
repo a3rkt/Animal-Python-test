@@ -1,7 +1,7 @@
 class Pet:
 
-    sound = 'Звук животного'
-    alias = 'Вид животного'
+    sound = 'Молчит'
+    alias = 'Неизвестное животное'
 
     def __init__(self, name, age):
         self.name = name
@@ -32,7 +32,7 @@ class Dog(Pet):
 barsik = Cat('Барсик', 10)
 timosha = Cat('Тимоша', 5)
 bobik = Dog('Бобик', 13)
-boris = Cat('Борис', 8)
+boris = Pet('Борис', 8)
 
 pets = [barsik, timosha, bobik, boris]
 
