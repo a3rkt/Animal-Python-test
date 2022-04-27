@@ -1,32 +1,27 @@
 class Pet:
 
-    def __init__(self, name, age, alias, sound):
+    def __init__(self, name, age, sound, alias):
         self.name = name
         self.age = age
-        self.alias = alias
         self.sound = sound
+        self.alias = alias
 
     def make_sound(self):
         print(f'{self.alias} {self.name} {self.sound}')
-        return
-
-
-class Dog(Pet):
-
-    def __init__(self, name, age, alias='Пёс', sound='бреша'):
-        self.name = name
-        self.age = age
-        self.alias = alias
-        self.sound = sound
-
 
 class Cat(Pet):
 
-    def __init__(self, name, age, alias ='Кот', sound='мыу-мыу'):
-        self.name = name
-        self.age = age
-        self.alias = alias
+    def __init__(self, name, age, sound='мыу-мыу', alias='Кот'):
+        super().__init__(self, name, age, sound)
         self.sound = sound
+        self.alias = alias
+
+class Dog(Pet):
+
+    def __init__(self, name, age, sound='бреша', alias='Пёс'):
+        super().__init__(self, name, age, sound)
+        self.sound = sound
+        self.alias = alias
 
 
 barsik = Cat('Барсик', 10)
@@ -34,6 +29,7 @@ timosha = Cat('Тимоша', 5)
 bobik = Dog('Бобик', 13)
 
 pets = [barsik, timosha, bobik]
+
 print('Што кажуць беларускiя жывёлы:')
 for pet in pets:
     pet.make_sound()
