@@ -1,5 +1,9 @@
-class Pet:
+from abc import ABC, abstractmethod
 
+
+class Pet(ABC):
+
+    @abstractmethod
     def __init__(self, name, age, sound, alias):
         self.name = name
         self.age = age
